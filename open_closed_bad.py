@@ -7,7 +7,7 @@ Open closed principle:
 # Bad
 class Report:
     def __init__(self, title: str, content: str):
-        self.title = title
+        self.title = title#
         self.content = content
 
     def edit_title(self, new_title: str):
