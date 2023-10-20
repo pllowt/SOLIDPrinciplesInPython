@@ -1,3 +1,7 @@
+"""
+Liskov substitution:
+    Subtypes must be substitutable for their base types.
+"""
 # Bad
 class Bird:
     def fly(self):
