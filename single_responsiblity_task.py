@@ -13,7 +13,6 @@ class TablesAdaptor:
     def insert(self, data: str, table: str) -> str:
         return "successfully inserted into to table"
 
-
     def read_from_table(self, table: str) -> str:
         """
         Return a table
