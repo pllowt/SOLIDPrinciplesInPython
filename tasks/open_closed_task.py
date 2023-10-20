@@ -12,7 +12,7 @@ class TablesAdaptor:
         }
         return table_map[key]
 
-    def read_from_table_return_str(self, table: str) -> str:
+    def read_from_table_return_plain_text(self, table: str) -> str:
         """
         Return a table
         as a string
