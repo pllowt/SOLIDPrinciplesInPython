@@ -11,7 +11,7 @@ class Report:
 
     def write_report(self, file_path: str):
         with open(file_path, 'w') as file:
-            file.write(f"{self.title}/n{self.content}")
+            file.write(f"{self.title}\n{self.content}")
 
     def edit_title(self, new_title: str):
         self.title = new_title
@@ -19,6 +19,6 @@ class Report:
 
 if __name__ == '__main__':
     new_report = Report(
-        'Reporty Mcreportface', "this is some content inside of a report, I'm reporty mcreportface"
+        'Reporty Mcreportface', "This is some content inside of a report, I'm reporty mcreportface"
     )
-    new_report.write_report('./test_file.txt')
+    new_report.write_report('./bad_report.txt')
