@@ -18,3 +18,9 @@ class ReportWriter:
     def write_report(report: Report, file_path: str):
         with open(file_path, 'w') as file:
             file.write(f"{report.title}/n{report.content}")
+
+
+if __name__ == '__main__':
+    new_report = Report(
+            'Reporty Mcreportface', "this is some content inside of a report, I'm reporty mcreportface"
+        )
