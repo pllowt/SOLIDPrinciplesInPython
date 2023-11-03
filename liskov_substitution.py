@@ -2,25 +2,17 @@
 Liskov substitution:
     Subtypes must be substitutable for their base types.
 """
+
+
 # Bad
 class Bird:
+    def do_bird_thing(self):
+        print("I'm a bird")
+
     def fly(self):
-        pass
+        print("I am flying! Flap flap")
 
 
 class Ostrich(Bird):
-    pass
-
-
-# Good
-class Bird:
-    pass
-
-
-class FlyingBird(Bird):
     def fly(self):
         pass
-
-
-class Ostrich(Bird):
-    pass

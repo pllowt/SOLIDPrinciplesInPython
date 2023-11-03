@@ -6,18 +6,20 @@ Open closed principle:
 
 # Bad
 class Report:
-    def __init__(self, title: str, content: str):
+    def __init__(self, title: str, content: str, format_type: str):
         self.title = title
         self.content = content
+        self.format_type = format_type
 
     def edit_title(self, new_title: str):
         self.title = new_title
 
-    def format_as_html(self):
-        return f'<html><head><title>{self.title}</title></head><body>{self.content}</body></html>'
+    def format(self):
+        if self.format_type == "HTML":
+            return f'<html><head><title>{self.title}</title></head><body>{self.content}</body></html>'
+        elif self.format_type == "plain":
+            return f'{self.title}\n{self.content}'
 
-    def format_as_plain_text(self):
-        return f'{self.title}\n{self.content}'
 
 
 class ReportWriter:
@@ -29,7 +31,7 @@ class ReportWriter:
 
 if __name__ == '__main__':
     new_report = Report(
-        'Reporty Mcreportface', "this is some content inside of a report, I'm reporty mcreportface"
+        'Reporty Mcreportface', "this is some content inside of a report, I'm reporty mcreportface", "HTML"
     )
-    print(new_report.format_as_html())
-    print(new_report.format_as_plain_text())
+    print(new_report.format())
+
