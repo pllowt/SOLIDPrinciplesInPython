@@ -15,4 +15,13 @@ class Bird:
 
 class Ostrich(Bird):
     def fly(self):
-        pass
+        print("I can't fly! I'm an ostrich!")
+
+
+if __name__ == "__main__":
+    sparrow = Bird()
+    dave_the_ostrich = Ostrich()
+    sparrow.fly()
+    sparrow.do_bird_thing()
+    dave_the_ostrich.fly()
+    dave_the_ostrich.do_bird_thing()
