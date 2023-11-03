@@ -18,10 +18,6 @@ class TablesAdaptor:
         as a string
         """
 
-        loc = self.table_map(table)
-        if not loc:
-            raise Exception("Table not found")
-
         return "I'm some data"
 
     def read_from_table_return_df(self, table: str) -> pd.DataFrame:
@@ -29,10 +25,6 @@ class TablesAdaptor:
         Return a table
         as a pandas dataframe
         """
-
-        loc = self.table_map(table)
-        if not loc:
-            raise Exception("Table not found")
 
         return pd.DataFrame()
 
